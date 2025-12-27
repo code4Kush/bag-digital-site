@@ -5,12 +5,12 @@
       "title": "Systems <br><span class='accent-text'>built for</span> <br>performance."
     },
     "industrial": {
-      "hero": "https://images.pexels.com/photos/1671014/pexels-photo-1671014.jpeg",
-      "title": "Precision <br><span class='accent-text'>crafted through</span> <br>heat."
+      "hero": "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
+      "title": "Automation <br><span class='accent-text'>engineered for</span> <br>growth."
     },
     "luxe": {
       "hero": "https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg",
-      "title": "The Art <br><span class='accent-text'>of the</span> <br>Flame."
+      "title": "Strategic <br><span class='accent-text'>intelligence for</span> <br>scale."
     }
   }
 }

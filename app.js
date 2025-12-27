@@ -11,34 +11,23 @@ async function init() {
         siteContent = await contentRes.json();
         inventory = await inventoryRes.json();
 
-        renderInventory();
+        renderServices();
         setTheme('agency');
         setupForm();
     } catch (err) {
-        console.error("Architect Error:", err);
+        console.error("Initialization Error:", err);
     }
 }
 
-function renderInventory() {
-    const productGrid = document.getElementById('product-grid');
-    productGrid.innerHTML = inventory.products.map(p => `
+function renderServices() {
+    const grid = document.getElementById('service-grid');
+    grid.innerHTML = inventory.services.map(s => `
         <div class="morph-card">
-            <div class="visual-wrap"><img src="${p.img}" alt="${p.title}"></div>
-            <div class="category-tag">${p.category}</div>
-            <h3>${p.title}</h3>
-            <div class="price">${p.price}</div>
-            <p>${p.desc}</p>
-            <a href="${p.stripe_url}" class="btn-buy">PURCHASE</a>
-        </div>
-    `).join('');
-
-    const serviceGrid = document.getElementById('service-grid');
-    serviceGrid.innerHTML = inventory.services.map(s => `
-        <div class="morph-card">
+            <div class="category-tag">${s.category}</div>
             <h3>${s.title}</h3>
             <div class="price">${s.price}</div>
             <p>${s.desc}</p>
-            <a href="#contact" class="btn-buy" style="background:transparent; border:1px solid var(--accent); color:white;">INQUIRE</a>
+            <a href="#contact" class="btn-buy" style="background:var(--accent); color:black; text-decoration:none;">INQUIRE</a>
         </div>
     `).join('');
 }
@@ -63,7 +52,7 @@ function setupForm() {
             name: e.target.querySelectorAll('input')[0].value,
             email: e.target.querySelectorAll('input')[1].value,
             message: e.target.querySelector('textarea').value,
-            subject: document.documentElement.getAttribute('data-theme').toUpperCase() + " Inquiry"
+            subject: "BAG Digital Audit Inquiry"
         };
 
         try {

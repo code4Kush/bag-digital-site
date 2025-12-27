@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAG Digital | Beaufort Art Glass</title>
+    <title>BAG Digital | Systems & Automation</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Playfair+Display:wght@700&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
 </head>
@@ -12,9 +12,8 @@
     <nav class="global-nav">
         <div class="brand-group" onclick="setTheme('agency')" style="cursor:pointer; font-weight:bold;">B/G DIGITAL</div>
         <div class="nav-links">
-            <a href="#products" style="color:white; text-decoration:none; font-size:12px; margin-left:20px;">VAULT</a>
             <a href="#services" style="color:white; text-decoration:none; font-size:12px; margin-left:20px;">SYSTEMS</a>
-            <a href="#contact" style="color:white; text-decoration:none; font-size:12px; margin-left:20px;">INQUIRE</a>
+            <a href="#contact" style="color:white; text-decoration:none; font-size:12px; margin-left:20px;">AUDIT</a>
         </div>
     </nav>
 
@@ -22,7 +21,7 @@
         <div class="dock-buttons">
             <button onclick="setTheme('agency')" id="btn-agency">Cyber</button>
             <button onclick="setTheme('industrial')" id="btn-industrial">Studio</button>
-            <button onclick="setTheme('luxe')" id="btn-luxe">Gallery</button>
+            <button onclick="setTheme('luxe')" id="btn-luxe">Strategic</button>
         </div>
     </aside>
 
@@ -30,27 +29,22 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 id="hero-title">Systems <br><span class="accent-text">built for</span> <br>performance.</h1>
-            <p id="hero-desc">Borosilicate artistry & modern systems. Beaufort, SC.</p>
+            <p id="hero-desc">Bespoke digital architecture & AI automation. Based in Beaufort, SC.</p>
         </div>
     </header>
 
-    <section id="products" class="section-pad">
-        <h2 style="letter-spacing:4px; border-left: 4px solid var(--accent); padding-left: 15px;">THE VAULT</h2>
-        <div id="product-grid" class="grid"></div>
-    </section>
-
-    <section id="services" class="section-pad" style="background: rgba(255,255,255,0.01);">
+    <section id="services" class="section-pad">
         <h2 style="letter-spacing:4px; border-left: 4px solid var(--accent); padding-left: 15px;">SOLUTIONS</h2>
         <div id="service-grid" class="grid"></div>
     </section>
 
-    <section id="contact" class="section-pad">
-        <h2>TRANSMISSION</h2>
+    <section id="contact" class="section-pad" style="background: rgba(255,255,255,0.01);">
+        <h2>REQUEST AN AUDIT</h2>
         <form id="lead-form" style="margin-top:40px; max-width: 600px;">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Describe your project, commission, or audit interest..." rows="5" required></textarea>
-            <button type="submit" class="btn-buy">SEND INQUIRY</button>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Business Email" required>
+            <textarea placeholder="Tell me about your current bottlenecks..." rows="5" required></textarea>
+            <button type="submit" class="btn-buy" style="background:var(--accent); color:black;">START TRANSMISSION</button>
         </form>
     </section>
 

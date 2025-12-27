@@ -1,46 +1,27 @@
 {
-  "products": [
-    {
-      "id": "boro-1",
-      "title": "Fumed Nebula Pendant",
-      "price": "$65",
-      "category": "Artisanal",
-      "desc": "Silver & Gold fumed borosilicate glass. Original Beaufort Art Glass.",
-      "stripe_url": "#",
-      "img": "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg"
-    },
-    {
-      "id": "boro-2",
-      "title": "Galaxy Marble",
-      "price": "$120",
-      "category": "Artisanal",
-      "desc": "32mm Borosilicate orb with deep space implosion detail.",
-      "stripe_url": "#",
-      "img": "https://images.pexels.com/photos/1327684/pexels-photo-1327684.jpeg"
-    },
-    {
-      "id": "consign-1",
-      "title": "Guest Artist Piece",
-      "price": "$85",
-      "category": "Consignment",
-      "desc": "Hand-crafted by local partners. Selected for quality.",
-      "stripe_url": "#",
-      "img": "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg"
-    }
-  ],
   "services": [
     {
       "id": "svc-os",
-      "title": "Beaufort Business OS",
+      "title": "Business OS Implementation",
       "price": "$499",
-      "desc": "Custom website + Lead automation + CRM. No monthly fees.",
+      "category": "Core System",
+      "desc": "Custom landing page + automated lead capture + CRM integration. Built with $0 monthly subscription overhead.",
       "stripe_url": "#"
     },
     {
       "id": "svc-audit",
       "title": "Systems Audit",
       "price": "FREE",
-      "desc": "We find the bottlenecks in your business and fix them with AI.",
+      "category": "Discovery",
+      "desc": "A deep dive into your current tech stack to identify bottlenecks and AI automation opportunities.",
+      "stripe_url": "#"
+    },
+    {
+      "id": "svc-agent",
+      "title": "Custom AI Agent",
+      "price": "$250",
+      "category": "Automation",
+      "desc": "A 24/7 intelligent chatbot trained on your business data to handle inquiries and bookings automatically.",
       "stripe_url": "#"
     }
   ]
