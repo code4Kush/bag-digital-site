@@ -1,33 +1,39 @@
-let globalData = null;
+let siteContent = null;
+let inventory = null;
+const GAS_URL = 'YOUR_DEPLOYED_GAS_URL'; // Replace after deploying Code.gs
 
 async function init() {
     try {
-        const res = await fetch('content.json');
-        globalData = await res.json();
-        renderProducts();
-        renderServices();
+        const [contentRes, inventoryRes] = await Promise.all([
+            fetch('content.json'),
+            fetch('inventory.json')
+        ]);
+        siteContent = await contentRes.json();
+        inventory = await inventoryRes.json();
+
+        renderInventory();
         setTheme('agency');
+        setupForm();
     } catch (err) {
-        console.error("Initialization failed:", err);
+        console.error("Architect Error:", err);
     }
 }
 
-function renderProducts() {
-    const grid = document.getElementById('product-grid');
-    grid.innerHTML = globalData.products.map(p => `
+function renderInventory() {
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = inventory.products.map(p => `
         <div class="morph-card">
             <div class="visual-wrap"><img src="${p.img}" alt="${p.title}"></div>
+            <div class="category-tag">${p.category}</div>
             <h3>${p.title}</h3>
             <div class="price">${p.price}</div>
             <p>${p.desc}</p>
             <a href="${p.stripe_url}" class="btn-buy">PURCHASE</a>
         </div>
     `).join('');
-}
 
-function renderServices() {
-    const grid = document.getElementById('service-grid');
-    grid.innerHTML = globalData.services.map(s => `
+    const serviceGrid = document.getElementById('service-grid');
+    serviceGrid.innerHTML = inventory.services.map(s => `
         <div class="morph-card">
             <h3>${s.title}</h3>
             <div class="price">${s.price}</div>
@@ -38,14 +44,41 @@ function renderServices() {
 }
 
 function setTheme(theme) {
-    const t = globalData.themes[theme];
+    const t = siteContent.themes[theme];
     document.documentElement.setAttribute('data-theme', theme);
     document.getElementById('hero-surface').style.backgroundImage = `url('${t.hero}')`;
+    document.getElementById('hero-title').innerHTML = t.title;
     
-    // Update active button
     document.querySelectorAll('.dock-buttons button').forEach(b => b.classList.remove('active'));
     const activeBtn = document.getElementById('btn-' + theme);
     if(activeBtn) activeBtn.classList.add('active');
+}
+
+function setupForm() {
+    document.getElementById('lead-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        btn.innerText = "TRANSMITTING...";
+
+        const payload = {
+            name: e.target.querySelectorAll('input')[0].value,
+            email: e.target.querySelectorAll('input')[1].value,
+            message: e.target.querySelector('textarea').value,
+            subject: document.documentElement.getAttribute('data-theme').toUpperCase() + " Inquiry"
+        };
+
+        try {
+            await fetch(GAS_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify(payload)
+            });
+            btn.innerText = "SENT SUCCESSFULLY";
+            e.target.reset();
+        } catch (err) {
+            btn.innerText = "RETRY LATER";
+        }
+    });
 }
 
 window.onload = init;

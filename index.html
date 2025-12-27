@@ -10,21 +10,19 @@
 <body>
 
     <nav class="global-nav">
-        <div class="brand-group" onclick="setTheme('agency')">
-            <span>B/G DIGITAL</span>
-        </div>
+        <div class="brand-group" onclick="setTheme('agency')">B/G DIGITAL</div>
         <div class="nav-links">
-            <a href="#products" style="color:white; text-decoration:none; margin-left:20px; font-size:12px;">PRODUCTS</a>
-            <a href="#services" style="color:white; text-decoration:none; margin-left:20px; font-size:12px;">SERVICES</a>
-            <a href="#contact" style="color:white; text-decoration:none; margin-left:20px; font-size:12px;">CONTACT</a>
+            <a href="#products" style="color:white; text-decoration:none; font-size:12px; margin-left:20px;">ART</a>
+            <a href="#services" style="color:white; text-decoration:none; font-size:12px; margin-left:20px;">SYSTEMS</a>
+            <a href="#contact" style="color:white; text-decoration:none; font-size:12px; margin-left:20px;">INQUIRE</a>
         </div>
     </nav>
 
     <aside class="dock-nav">
         <div class="dock-buttons">
-            <button onclick="setTheme('agency')" id="btn-agency">CYBER</button>
-            <button onclick="setTheme('industrial')" id="btn-industrial">STUDIO</button>
-            <button onclick="setTheme('luxe')" id="btn-luxe">GALLERY</button>
+            <button onclick="setTheme('agency')" id="btn-agency">Cyber</button>
+            <button onclick="setTheme('industrial')" id="btn-industrial">Studio</button>
+            <button onclick="setTheme('luxe')" id="btn-luxe">Gallery</button>
         </div>
     </aside>
 
@@ -32,28 +30,27 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 id="hero-title">Precision <br><span class="accent-text">crafted through</span> <br>heat.</h1>
-            <p id="hero-desc">Borosilicate glass artistry & digital infrastructure.</p>
-            <a href="#products" class="btn-buy" style="max-width:200px;">SHOP ART</a>
+            <p id="hero-desc">Borosilicate glass artistry & digital infrastructure. Beaufort, SC.</p>
         </div>
     </header>
 
     <section id="products" class="section-pad">
-        <h2 style="letter-spacing:4px;">COLLECTION</h2>
+        <h2 style="letter-spacing:4px; border-left: 4px solid var(--accent); padding-left: 15px;">THE COLLECTIONS</h2>
         <div id="product-grid" class="grid"></div>
     </section>
 
-    <section id="services" class="section-pad" style="background: rgba(255,255,255,0.02);">
-        <h2 style="letter-spacing:4px;">SYSTEMS</h2>
+    <section id="services" class="section-pad" style="background: rgba(255,255,255,0.01);">
+        <h2 style="letter-spacing:4px; border-left: 4px solid var(--accent); padding-left: 15px;">BUSINESS OS</h2>
         <div id="service-grid" class="grid"></div>
     </section>
 
     <section id="contact" class="section-pad">
-        <h2>INQUIRIES</h2>
-        <form id="lead-form" style="margin-top:40px;">
+        <h2>TRANSMISSION</h2>
+        <form id="lead-form" style="margin-top:40px; max-width: 600px;">
             <input type="text" placeholder="Name" required>
             <input type="email" placeholder="Email" required>
-            <textarea placeholder="Tell me about your custom commission or digital project..." rows="5"></textarea>
-            <button type="submit" class="btn-submit">SEND MESSAGE</button>
+            <textarea placeholder="Specify item or digital service interest..." rows="5" required></textarea>
+            <button type="submit" class="btn-buy">SEND INQUIRY</button>
         </form>
     </section>
 

@@ -1,0 +1,47 @@
+{
+  "products": [
+    {
+      "id": "boro-1",
+      "title": "Fumed Nebula Pendant",
+      "price": "$65",
+      "category": "Artisanal",
+      "desc": "Silver & Gold fumed borosilicate glass. Includes leather cord.",
+      "stripe_url": "#",
+      "img": "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg"
+    },
+    {
+      "id": "boro-2",
+      "title": "Galaxy Marble",
+      "price": "$120",
+      "category": "Artisanal",
+      "desc": "32mm Borosilicate orb with deep space implosion detail.",
+      "stripe_url": "#",
+      "img": "https://images.pexels.com/photos/1327684/pexels-photo-1327684.jpeg"
+    },
+    {
+      "id": "consign-1",
+      "title": "Guest Artist Marble",
+      "price": "$85",
+      "category": "Consignment",
+      "desc": "Hand-crafted by local Beaufort partners.",
+      "stripe_url": "#",
+      "img": "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg"
+    }
+  ],
+  "services": [
+    {
+      "id": "svc-os",
+      "title": "Beaufort Business OS",
+      "price": "$499",
+      "desc": "Custom website + Lead automation + CRM. No monthly fees.",
+      "stripe_url": "#"
+    },
+    {
+      "id": "svc-ai",
+      "title": "AI System Audit",
+      "price": "$150",
+      "desc": "Finding bottlenecks in your business and fixing them with AI.",
+      "stripe_url": "#"
+    }
+  ]
+}
