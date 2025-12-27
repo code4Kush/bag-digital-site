@@ -1,0 +1,47 @@
+:root {
+    --bg: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.05);
+    --text: #ffffff;
+    --accent: #00f2ff;
+    --font-main: 'Space Grotesk', sans-serif;
+    --side-pad: 10%;
+}
+
+[data-theme="luxe"] { --accent: #d4af37; --font-main: 'Playfair Display', serif; }
+[data-theme="industrial"] { --accent: #ff4e00; --font-main: 'JetBrains Mono', monospace; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-main); overflow-x: hidden; scroll-behavior: smooth; }
+
+.global-nav { position: fixed; top: 0; width: 100%; padding: 20px var(--side-pad); display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--glass); }
+.brand-group { cursor: pointer; display: flex; align-items: center; gap: 10px; font-weight: bold; letter-spacing: 2px; }
+
+.dock-nav { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1000; }
+.dock-buttons { background: rgba(20,20,20,0.9); padding: 10px; border-radius: 50px; display: flex; gap: 10px; border: 1px solid var(--accent); }
+.dock-buttons button { background: none; border: none; color: white; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-size: 10px; transition: 0.3s; border: 1px solid transparent; }
+.dock-buttons button.active { background: var(--accent); color: black; font-weight: bold; }
+
+.hero { height: 100vh; display: flex; align-items: center; padding: 0 var(--side-pad); background-size: cover; background-position: center; transition: 1s ease-in-out; position: relative; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, black, transparent); }
+.hero-content { position: relative; z-index: 10; max-width: 600px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px; }
+.accent-text { color: var(--accent); }
+
+.section-pad { padding: 80px var(--side-pad); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+
+.morph-card { background: var(--glass); padding: 30px; border-radius: 15px; border: 1px solid var(--glass); transition: 0.3s; position: relative; overflow: hidden; }
+.morph-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+.visual-wrap img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+
+.btn-buy { display: block; width: 100%; padding: 15px; text-align: center; background: var(--accent); color: black; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 20px; }
+.price { font-size: 1.5rem; font-weight: bold; color: var(--accent); margin: 10px 0; }
+
+form { display: grid; gap: 20px; max-width: 600px; }
+input, textarea { width: 100%; padding: 15px; background: var(--glass); border: 1px solid var(--glass); color: white; border-radius: 5px; font-family: inherit; }
+.btn-submit { background: var(--accent); color: black; border: none; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero { text-align: center; }
+}

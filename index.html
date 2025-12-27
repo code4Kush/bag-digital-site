@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="agency">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAG Digital | Beaufort Art Glass</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Playfair+Display:wght@700&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="global-nav">
+        <div class="brand-group" onclick="setTheme('agency')">
+            <span>B/G DIGITAL</span>
+        </div>
+        <div class="nav-links">
+            <a href="#products" style="color:white; text-decoration:none; margin-left:20px; font-size:12px;">PRODUCTS</a>
+            <a href="#services" style="color:white; text-decoration:none; margin-left:20px; font-size:12px;">SERVICES</a>
+            <a href="#contact" style="color:white; text-decoration:none; margin-left:20px; font-size:12px;">CONTACT</a>
+        </div>
+    </nav>
+
+    <aside class="dock-nav">
+        <div class="dock-buttons">
+            <button onclick="setTheme('agency')" id="btn-agency">CYBER</button>
+            <button onclick="setTheme('industrial')" id="btn-industrial">STUDIO</button>
+            <button onclick="setTheme('luxe')" id="btn-luxe">GALLERY</button>
+        </div>
+    </aside>
+
+    <header class="hero" id="hero-surface">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="hero-title">Precision <br><span class="accent-text">crafted through</span> <br>heat.</h1>
+            <p id="hero-desc">Borosilicate glass artistry & digital infrastructure.</p>
+            <a href="#products" class="btn-buy" style="max-width:200px;">SHOP ART</a>
+        </div>
+    </header>
+
+    <section id="products" class="section-pad">
+        <h2 style="letter-spacing:4px;">COLLECTION</h2>
+        <div id="product-grid" class="grid"></div>
+    </section>
+
+    <section id="services" class="section-pad" style="background: rgba(255,255,255,0.02);">
+        <h2 style="letter-spacing:4px;">SYSTEMS</h2>
+        <div id="service-grid" class="grid"></div>
+    </section>
+
+    <section id="contact" class="section-pad">
+        <h2>INQUIRIES</h2>
+        <form id="lead-form" style="margin-top:40px;">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Tell me about your custom commission or digital project..." rows="5"></textarea>
+            <button type="submit" class="btn-submit">SEND MESSAGE</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
