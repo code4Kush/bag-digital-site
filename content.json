@@ -4,13 +4,13 @@
       "hero": "https://images.pexels.com/photos/3183158/pexels-photo-3183158.jpeg",
       "title": "Systems <br><span class='accent-text'>built for</span> <br>performance."
     },
-    "luxe": {
-      "hero": "https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg",
-      "title": "The Art <br><span class='accent-text'>of the</span> <br>Flame."
-    },
     "industrial": {
       "hero": "https://images.pexels.com/photos/1671014/pexels-photo-1671014.jpeg",
       "title": "Precision <br><span class='accent-text'>crafted through</span> <br>heat."
+    },
+    "luxe": {
+      "hero": "https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg",
+      "title": "The Art <br><span class='accent-text'>of the</span> <br>Flame."
     }
   }
 }

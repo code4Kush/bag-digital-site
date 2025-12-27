@@ -1,6 +1,6 @@
 let siteContent = null;
 let inventory = null;
-const GAS_URL = 'YOUR_DEPLOYED_GAS_URL'; // Replace after deploying Code.gs
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbzxrIZIiwYqpyWYO-4vBiLmtuVfT6KzlHPnqg2D3R6f1LNDwvOdbgwnbD5Ty3NxLB2i/exec'; 
 
 async function init() {
     try {
@@ -50,8 +50,7 @@ function setTheme(theme) {
     document.getElementById('hero-title').innerHTML = t.title;
     
     document.querySelectorAll('.dock-buttons button').forEach(b => b.classList.remove('active'));
-    const activeBtn = document.getElementById('btn-' + theme);
-    if(activeBtn) activeBtn.classList.add('active');
+    document.getElementById('btn-' + theme).classList.add('active');
 }
 
 function setupForm() {
@@ -73,7 +72,7 @@ function setupForm() {
                 mode: 'no-cors',
                 body: JSON.stringify(payload)
             });
-            btn.innerText = "SENT SUCCESSFULLY";
+            btn.innerText = "SUCCESSFUL";
             e.target.reset();
         } catch (err) {
             btn.innerText = "RETRY LATER";

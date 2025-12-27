@@ -14,29 +14,28 @@
 body { background: var(--bg); color: var(--text); font-family: var(--font-main); overflow-x: hidden; scroll-behavior: smooth; }
 
 .global-nav { position: fixed; top: 0; width: 100%; padding: 20px var(--side-pad); display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--glass); }
-.brand-group { font-weight: bold; letter-spacing: 2px; cursor: pointer; }
 
 .dock-nav { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1000; }
 .dock-buttons { background: rgba(20,20,20,0.9); padding: 8px; border-radius: 50px; display: flex; gap: 8px; border: 1px solid var(--glass); }
-.dock-buttons button { background: none; border: none; color: white; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-size: 10px; transition: 0.3s; text-transform: uppercase; }
+.dock-buttons button { background: none; border: none; color: white; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-size: 10px; text-transform: uppercase; transition: 0.3s; }
 .dock-buttons button.active { background: var(--accent); color: black; font-weight: bold; }
 
-.hero { height: 100vh; display: flex; align-items: center; padding: 0 var(--side-pad); background-size: cover; background-position: center; transition: 1s ease-in-out; position: relative; }
+.hero { height: 100vh; display: flex; align-items: center; padding: 0 var(--side-pad); background-size: cover; background-position: center; position: relative; transition: background-image 0.8s ease-in-out; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, black, rgba(0,0,0,0.4)); }
 .hero-content { position: relative; z-index: 10; max-width: 700px; }
 .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
 .accent-text { color: var(--accent); }
 
 .section-pad { padding: 100px var(--side-pad); }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
-.morph-card { background: var(--glass); padding: 30px; border-radius: 20px; border: 1px solid var(--glass); transition: 0.3s; position: relative; }
-.morph-card:hover { border-color: var(--accent); transform: translateY(-10px); }
+.morph-card { background: var(--glass); padding: 30px; border-radius: 20px; border: 1px solid var(--glass); position: relative; transition: 0.3s; }
+.morph-card:hover { border-color: var(--accent); transform: translateY(-5px); }
 
-.category-tag { font-size: 10px; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; }
+.category-tag { font-size: 10px; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
 .visual-wrap img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
 
 .price { font-size: 1.8rem; font-weight: bold; color: var(--accent); margin: 10px 0; }
-.btn-buy { display: block; width: 100%; padding: 18px; text-align: center; background: var(--accent); color: black; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; border: none; cursor: pointer; }
+.btn-buy { display: block; width: 100%; padding: 18px; text-align: center; background: var(--accent); color: black; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; cursor: pointer; border: none; }
 
 input, textarea { width: 100%; padding: 18px; background: var(--glass); border: 1px solid var(--glass); color: white; border-radius: 8px; margin-bottom: 15px; font-family: inherit; }
